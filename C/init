@@ -1,0 +1,7 @@
+DEFINE PUBLIC <init>()V
+A:
+ALOAD this
+LDC "m2mrem.tritronik.com"
+INVOKESPECIAL C.<init>(Ljava/lang/String;)V
+RETURN
+B:

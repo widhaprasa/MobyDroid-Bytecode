@@ -1,0 +1,44 @@
+DEFINE PRIVATE SYNTHETIC a(LD; 1)V
+A:
+NEW aj
+DUP
+ALOAD 1
+INVOKESPECIAL aj.<init>(LD;)V
+ASTORE 1
+ALOAD this
+GETFIELD ax.a Ljava/util/List;
+ALOAD 1
+INVOKEINTERFACE java/util/List.contains(Ljava/lang/Object;)Z
+IFNE B
+ALOAD this
+GETFIELD ax.a Ljava/util/List;
+ALOAD 1
+INVOKEINTERFACE java/util/List.add(Ljava/lang/Object;)Z
+POP
+LDC "<html><b>"
+ASTORE 2
+NEW java/lang/StringBuilder
+DUP
+INVOKESPECIAL java/lang/StringBuilder.<init>()V
+ALOAD 2
+INVOKEVIRTUAL java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+ALOAD 1
+GETFIELD D.a Ljava/lang/String;
+INVOKEVIRTUAL java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+INVOKEVIRTUAL java/lang/StringBuilder.toString()Ljava/lang/String;
+ASTORE 2
+NEW java/lang/StringBuilder
+DUP
+INVOKESPECIAL java/lang/StringBuilder.<init>()V
+ALOAD 2
+INVOKEVIRTUAL java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+LDC "</b></html>"
+INVOKEVIRTUAL java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+INVOKEVIRTUAL java/lang/StringBuilder.toString()Ljava/lang/String;
+ASTORE 2
+ALOAD this
+GETFIELD ax.a Ljavax/swing/JComboBox;
+ALOAD 2
+INVOKEVIRTUAL javax/swing/JComboBox.addItem(Ljava/lang/Object;)V
+B:
+RETURN
