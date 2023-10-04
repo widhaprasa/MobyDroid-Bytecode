@@ -1,4 +1,6 @@
 DEFINE PRIVATE SYNTHETIC a(LD; 1)V
+TRY EX_START_2 EX_END_2 CATCH(java/io/IOException) EX_HANDLER_2
+TRY EX_START_2 EX_END_2 CATCH(I) EX_HANDLER_2
 A:
 NEW aj
 DUP
@@ -9,12 +11,13 @@ ALOAD this
 GETFIELD ax.a Ljava/util/List;
 ALOAD 1
 INVOKEINTERFACE java/util/List.contains(Ljava/lang/Object;)Z
-IFNE B
+IFNE C
 ALOAD this
 GETFIELD ax.a Ljava/util/List;
 ALOAD 1
 INVOKEINTERFACE java/util/List.add(Ljava/lang/Object;)Z
 POP
+EX_START_2:
 LDC "<html><b>"
 ASTORE 2
 NEW java/lang/StringBuilder
@@ -25,20 +28,32 @@ INVOKEVIRTUAL java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/Strin
 ALOAD 1
 GETFIELD D.a Ljava/lang/String;
 INVOKEVIRTUAL java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+LDC "</b></html>"
+INVOKEVIRTUAL java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 INVOKEVIRTUAL java/lang/StringBuilder.toString()Ljava/lang/String;
+ASTORE 2
+EX_END_2:
+GOTO B
+EX_HANDLER_2:
+ASTORE 3
+LDC "<html><b><font color='red'>"
 ASTORE 2
 NEW java/lang/StringBuilder
 DUP
 INVOKESPECIAL java/lang/StringBuilder.<init>()V
 ALOAD 2
 INVOKEVIRTUAL java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-LDC "</b></html>"
+ALOAD 1
+GETFIELD D.a Ljava/lang/String;
+INVOKEVIRTUAL java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+LDC " (offline)</font></b></html>"
 INVOKEVIRTUAL java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 INVOKEVIRTUAL java/lang/StringBuilder.toString()Ljava/lang/String;
 ASTORE 2
+B:
 ALOAD this
 GETFIELD ax.a Ljavax/swing/JComboBox;
 ALOAD 2
 INVOKEVIRTUAL javax/swing/JComboBox.addItem(Ljava/lang/Object;)V
-B:
+C:
 RETURN
