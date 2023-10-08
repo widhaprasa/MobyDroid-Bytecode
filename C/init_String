@@ -7,7 +7,7 @@ ALOAD 1
 PUTFIELD C.a Ljava/lang/String;
 ALOAD this
 LDC 56037
-PUTFIELD C.a I
+PUTFIELD C.b I
 RETURN
 B:
 C:

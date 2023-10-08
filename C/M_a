@@ -6,7 +6,8 @@ NEW java/net/Socket
 DUP
 ALOAD this
 GETFIELD C.a Ljava/lang/String;
-LDC 56037
+ALOAD this
+GETFIELD C.b I
 INVOKESPECIAL java/net/Socket.<init>(Ljava/lang/String;I)V
 INVOKESPECIAL M.<init>(Ljava/net/Socket;)V
 ARETURN
