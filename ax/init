@@ -211,7 +211,7 @@ ALOAD 1
 ICONST_0
 INVOKEVIRTUAL ax.setDefaultCloseOperation(I)V
 ALOAD 1
-LDC "MobyDroid"
+LDC "MobyDroid M2MREM"
 INVOKEVIRTUAL ax.setTitle(Ljava/lang/String;)V
 ALOAD 1
 NEW java/awt/Dimension
@@ -446,7 +446,7 @@ INVOKESPECIAL java/awt/Color.<init>(III)V
 INVOKEVIRTUAL javax/swing/JLabel.setForeground(Ljava/awt/Color;)V
 ALOAD 1
 GETFIELD ax.b Ljavax/swing/JLabel;
-LDC "MobyDroid"
+LDC "MobyDroid M2MREM"
 INVOKEVIRTUAL javax/swing/JLabel.setText(Ljava/lang/String;)V
 NEW javax/swing/GroupLayout
 DUP
