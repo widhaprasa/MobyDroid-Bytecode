@@ -886,10 +886,6 @@ LDC "Wireless:"
 INVOKESTATIC javax/swing/BorderFactory.createTitledBorder(Ljava/lang/String;)Ljavax/swing/border/TitledBorder;
 INVOKEVIRTUAL javax/swing/JPanel.setBorder(Ljavax/swing/border/Border;)V
 ALOAD 1
-GETFIELD ax.f Ljavax/swing/JPanel;
-ICONST_1
-INVOKEVIRTUAL javax/swing/JPanel.setVisible(Z)V
-ALOAD 1
 GETFIELD ax.a Ljavax/swing/JTextField;
 LDC "192.168.1.1"
 INVOKEVIRTUAL javax/swing/JTextField.setText(Ljava/lang/String;)V
