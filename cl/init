@@ -83,7 +83,7 @@ ICONST_0
 INVOKEVIRTUAL javax/swing/JLabel.setHorizontalAlignment(I)V
 ALOAD 1
 GETFIELD cl.d Ljavax/swing/JLabel;
-LDC "MobyDroid v0.6-M2MREM"
+LDC "MobyDroid v0.6-m2mrem"
 INVOKEVIRTUAL javax/swing/JLabel.setText(Ljava/lang/String;)V
 ALOAD 1
 GETFIELD cl.a Ljavax/swing/JLabel;
