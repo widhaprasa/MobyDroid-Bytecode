@@ -13,16 +13,16 @@ ASTORE 1
 GETSTATIC java/util/logging/Level.SEVERE Ljava/util/logging/Level;
 LDC "UpdateDevices"
 ALOAD 1
-INVOKESTATIC Z.a(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Object;)V
+INVOKESTATIC ab.a(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Object;)V
 RETURN
 D:
 ALOAD 1
 INVOKEINTERFACE java/util/Map.values()Ljava/util/Collection;
 ALOAD this
-INVOKEDYNAMIC accept (Lax;)Ljava/util/function/Consumer; ${H_META} args[(Ljava/lang/Object;)V, handle[H_INVOKESPECIAL ax.a(LD;)V], (LD;)V]
+INVOKEDYNAMIC accept (Laz;)Ljava/util/function/Consumer; ${H_META} args[(Ljava/lang/Object;)V, handle[H_INVOKESPECIAL az.a(LD;)V], (LD;)V]
 INVOKEINTERFACE java/util/Collection.forEach(Ljava/util/function/Consumer;)V
 ALOAD this
-GETFIELD ax.a Ljava/util/List;
+GETFIELD az.a Ljava/util/List;
 INVOKEINTERFACE java/util/List.iterator()Ljava/util/Iterator;
 ASTORE 2
 E:
@@ -37,12 +37,12 @@ ALOAD 3
 INVOKEINTERFACE java/util/Map.containsValue(Ljava/lang/Object;)Z
 IFNE E
 ALOAD this
-GETFIELD ax.a Ljava/util/List;
+GETFIELD az.a Ljava/util/List;
 ALOAD 3
 INVOKEINTERFACE java/util/List.indexOf(Ljava/lang/Object;)I
 ISTORE 4
 ALOAD this
-GETFIELD ax.a Ljavax/swing/JComboBox;
+GETFIELD az.a Ljavax/swing/JComboBox;
 ILOAD 4
 INVOKEVIRTUAL javax/swing/JComboBox.removeItemAt(I)V
 ALOAD 2

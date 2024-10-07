@@ -2,18 +2,18 @@ DEFINE PRIVATE SYNTHETIC a(LD; 1)V
 TRY EX_START_2 EX_END_2 CATCH(java/io/IOException) EX_HANDLER_2
 TRY EX_START_2 EX_END_2 CATCH(I) EX_HANDLER_2
 A:
-NEW aj
+NEW al
 DUP
 ALOAD 1
-INVOKESPECIAL aj.<init>(LD;)V
+INVOKESPECIAL al.<init>(LD;)V
 ASTORE 1
 ALOAD this
-GETFIELD ax.a Ljava/util/List;
+GETFIELD az.a Ljava/util/List;
 ALOAD 1
 INVOKEINTERFACE java/util/List.contains(Ljava/lang/Object;)Z
 IFNE C
 ALOAD this
-GETFIELD ax.a Ljava/util/List;
+GETFIELD az.a Ljava/util/List;
 ALOAD 1
 INVOKEINTERFACE java/util/List.add(Ljava/lang/Object;)Z
 POP
@@ -52,7 +52,7 @@ INVOKEVIRTUAL java/lang/StringBuilder.toString()Ljava/lang/String;
 ASTORE 2
 B:
 ALOAD this
-GETFIELD ax.a Ljavax/swing/JComboBox;
+GETFIELD az.a Ljavax/swing/JComboBox;
 ALOAD 2
 INVOKEVIRTUAL javax/swing/JComboBox.addItem(Ljava/lang/Object;)V
 C:
